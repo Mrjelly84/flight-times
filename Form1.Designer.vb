@@ -26,7 +26,7 @@ Partial Class Form1
         Me.cboDepartureAirport = New System.Windows.Forms.ComboBox()
         Me.cboArrivalAirport = New System.Windows.Forms.ComboBox()
         Me.txtDepartureTime = New System.Windows.Forms.TextBox()
-        Me.btnGo = New System.Windows.Forms.Button()
+        Me.btnContinue = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -61,14 +61,14 @@ Partial Class Form1
         Me.txtDepartureTime.Size = New System.Drawing.Size(100, 20)
         Me.txtDepartureTime.TabIndex = 3
         '
-        'btnGo
+        'btnContinue
         '
-        Me.btnGo.Location = New System.Drawing.Point(167, 215)
-        Me.btnGo.Name = "btnGo"
-        Me.btnGo.Size = New System.Drawing.Size(75, 23)
-        Me.btnGo.TabIndex = 4
-        Me.btnGo.Text = "Go"
-        Me.btnGo.UseVisualStyleBackColor = True
+        Me.btnContinue.Location = New System.Drawing.Point(167, 215)
+        Me.btnContinue.Name = "btnContinue"
+        Me.btnContinue.Size = New System.Drawing.Size(75, 23)
+        Me.btnContinue.TabIndex = 4
+        Me.btnContinue.Text = "Go"
+        Me.btnContinue.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -151,7 +151,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.btnGo)
+        Me.Controls.Add(Me.btnContinue)
         Me.Controls.Add(Me.txtDepartureTime)
         Me.Controls.Add(Me.cboArrivalAirport)
         Me.Controls.Add(Me.cboDepartureAirport)
@@ -166,7 +166,7 @@ Partial Class Form1
     Friend WithEvents cboDepartureAirport As ComboBox
     Friend WithEvents cboArrivalAirport As ComboBox
     Friend WithEvents txtDepartureTime As TextBox
-    Friend WithEvents btnGo As Button
+    Friend WithEvents btnContinue As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label

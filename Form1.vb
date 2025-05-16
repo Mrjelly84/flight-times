@@ -16,4 +16,23 @@
             cboArrivalAirport.Items.Add(airport)
         Next
     End Sub
+
+    Private Sub btnContinue_Click(sender As Object, e As EventArgs) Handles btnContinue.Click
+        If cboDepartureAirport.SelectedIndex = 1 Then
+            ErrorProvider1.SetError(cboDepartureAirport, "You must select a departure airport")
+            Return
+        Else
+            ErrorProvider1.SetError(cboDepartureAirport, "")
+
+        End If
+
+        If cboArrivalAirport.SelectedIndex = 1 Then
+            ErrorProvider1.SetError(cboArrivalAirport, "You must select a arrival airport")
+            Return
+        Else
+            ErrorProvider1.SetError(cboArrivalAirport, "")
+
+        End If
+    End Sub
+
 End Class
