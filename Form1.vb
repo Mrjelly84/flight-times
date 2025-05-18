@@ -33,6 +33,22 @@
             ErrorProvider1.SetError(cboArrivalAirport, "")
 
         End If
+
+        Dim departIndex As Integer = cboDepartureAirport.SelectedIndex
+
+        Dim departWhen As DateTime = dtpDepartureDate.Value.Date
+        Dim departTime As DateTime
+
+        If Date.TryParse(txtDepartureTime.Text, departTime) = Nothing Then
+            ErrorProvider1.SetError(txtDepartureTime, "Departure time must be numeric")
+            Return
+        End If
+
+        departWhen = departWhen.AddHours(departTime.Hour)
+        departWhen = departWhen.AddMinutes(departTime.Minute)
+
+        departWhen = departWhen.AddHours(-utcOffsets(departIndex))
+
     End Sub
 
 End Class
