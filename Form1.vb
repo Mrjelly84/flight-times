@@ -49,6 +49,19 @@
 
         departWhen = departWhen.AddHours(-utcOffsets(departIndex))
 
+        Dim arriveIndex As Integer = cboArrivalAirport.SelectedIndex
+        Dim duration As Double = travelTimes(departIndex, arriveIndex)
+        Dim arriveWhen As Date = departWhen.AddHours(duration)
+
+        arriveWhen = arriveWhen.AddHours(utcOffsets(arriveIndex))
+
+        lblArriveWhen.Text = arriveWhen.ToString("d") & " " _
+            & arriveWhen.ToString("\a\t hh:mm tt") _
+            & "Travel time is" & duration & "hours"
+
     End Sub
 
+    Private Sub txtDepartureTime_TextChanged(sender As Object, e As EventArgs) Handles txtDepartureTime.TextChanged
+
+    End Sub
 End Class
